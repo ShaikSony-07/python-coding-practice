@@ -1,0 +1,129 @@
+#while loop- it is used when we are not sure about how many times we need to iterate the statements,it will be executed based on ne condition ,to avoid the infinite loop we should make one point of time the condition becomes false:
+a=4
+while a>1:
+    print(a)
+    a-=1
+
+a=4
+while a>1:
+    print('inside whileloop')
+    print(a)
+    a-=1
+print('outside the whileloop')
+
+
+#wap to print 1st n numbers by using while
+n=int(input())
+i=1
+while i<=n:
+    print(i)
+    i+=1
+
+
+#wap to find the factorial using whileloop
+n=int(input())
+f=1
+i=1
+while i<=n:
+    f*=i
+    i+=1
+print(f)
+
+#wap to find given number is perfect number or not
+n=int(input())
+s=0
+i=1
+while i<=n//2:
+    if n%i==0:
+        s+=i
+    i+=1
+if s==n:
+    print('it is a perfect number')
+else:
+    print('not a perfect number')
+
+#even numbers in given range using while
+ll=int(input())
+ul=int(input())
+i=1
+while i<=ul+1:
+    if i%2==0:
+        print(i)
+    i+=1
+
+#input l=[11,22,33,44],output l=[22,11,44,33]
+l=eval(input())
+for ip in range(len(l)):
+    if ip%2==0:
+        l[ip],l[ip+1]=l[ip+1],l[ip]
+print(l)
+
+#reverse a str without using slicing
+s=input()
+r=''
+for i in s:
+    r=i+r
+print(r)
+
+#replace all the vowels with their index positions
+s=input()
+r=''
+for ip in range(len(s)):
+    if s[ip] in 'aeiouAEIOU':
+        r+=str(ip)
+    else:
+        r+=s[ip]
+print(r)
+
+
+#replace all the digits with h in a str
+s=input()
+r=''
+for i in s:
+    if i.isdigit():
+        r+='h'
+    else:
+        r+=i
+print(r)
+
+
+#replace all the digits with h in a str
+s=input()
+r=''
+for ip in range(len(s)):
+    if s[ip].isdigit():
+        r+='h'
+    else:
+        r+=s[ip]
+print(r)
+
+
+#wap to find the sum of individual digits of a number
+n=int(input())
+r=n
+s=0
+while r>0:
+    s+=r%10
+    r//=10
+print(s)
+
+
+#wap to find reverse of a number
+n=int(input())
+r=0
+while n>0:
+    rem=n%10
+    r=rem*10+rem
+    n//=10
+print(r)
+
+#check given number is palindrome or not
+n=int(input())
+r=n
+k=0
+while r>0:
+    rem=r%10
+    k=k*10+rem
+    r//=10
+print(k)
+
