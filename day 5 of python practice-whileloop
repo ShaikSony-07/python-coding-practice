@@ -1,0 +1,36 @@
+#given number is armstrong number or not
+n=int(input())
+l=len(str(n))
+dummy=n
+c=0
+while dummy>0:
+    rem=dummy%10
+    dummy//=10
+    c+=rem**l
+if c==n:
+    print('armstrong number')
+
+#given number is disorium number or not
+n=int(input())
+l=len(str(n))
+dummy=n
+c=0
+while dummy>0:
+    rem=dummy%10
+    dummy//=10
+    c+=rem**l
+    l-=1
+if c==n:
+    print('disorium number')
+
+
+  #given number is harshad number or not
+n=int(input())
+dummy=n
+s=0
+while dummy>0:
+    rem=dummy%10
+    dummy//=10
+    s+=rem
+if n%s==0:
+    print('harshad number')
